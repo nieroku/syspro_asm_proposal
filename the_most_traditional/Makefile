@@ -20,12 +20,13 @@ $(BINARIES): %:%.o tests/test.c | build
 
 $(PASS): tests/%.passed:build/%
 	@echo "Testing $(<:tests/%=%)..."
-	@qemu-aarch64 $<
+	@qemu-aarch64 -L /usr/aarch64-linux-gnu $<
 	@touch $@
 
 tests/task.passed: $(PASS)
-	@echo $(DONE)/7 implementations pass the tests
-	@test 7 -le $(DONE) || (echo "More implementations are required" && false)
+	@echo $(DONE)/7 implementations passed the tests
+	@test 7 -le $(DONE)
+	@echo "That's enough! The task is done"
 	@touch $@
 
 clean-before:

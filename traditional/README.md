@@ -9,8 +9,8 @@
 ## Условие
 
 Предоставьте не менее чем пять **различных** реализаций функции
-`int isEven(int n)`, возвращающей 1 если n чётно и 0 если n нечётно, на
-ассемблере NASM.
+`int isEven(int n)`, возвращающей 1 если n чётно и 0 если n нечётно, на языке
+ассемблера NASM.
 
 Каждая реализация должна находиться в отдельном файле в корне репозитория с
 именем impl\*.nasm.
@@ -34,5 +34,5 @@
 
 - [Регистр флагов](https://en.wikipedia.org/wiki/FLAGS_register)
 - [Соглашение о вызовах на Linux x86-64](https://en.wikipedia.org/wiki/X86_calling_conventions#System_V_AMD64_ABI)
-- [Справочник инструкциям x86-64](https://www.felixcloutier.com/x86/)
+- [Справочник инструкций x86-64](https://www.felixcloutier.com/x86/)
 - [Что такое опкод и мнемоника?](https://stackoverflow.com/questions/17638888/difference-between-opcode-byte-code-mnemonics-machine-code-and-assembly)

@@ -5,7 +5,9 @@ OBJS=$(SOURCES:%.nasm=build/%.o)
 BINARIES=$(OBJS:%.o=%)
 PASS=$(BINARIES:build/%=tests/%.passed)
 
-all: clean-tests tests/task.passed
+DONE=$(words $(PASS))
+
+all: clean-before tests/task.passed
 
 build:
 	mkdir build
@@ -22,12 +24,13 @@ $(PASS): tests/%.passed:build/%
 	@touch $@
 
 tests/task.passed: $(PASS)
-	@test 5 -le $(words $(PASS)) || (echo "At least 5 implementations are required" && false)
-	@echo "All implementations seem to be working!"
+	@echo $(DONE)/7 implementations passed the tests
+	@test 7 -le $(DONE)
+	@echo "That's enough! The task is done"
 	@touch $@
 
-clean-tests:
+clean-before:
 	@rm -f $(PASS) tests/task.passed
 
-clean: clean-passed
-	@rm -rd build/
+clean: clean-before
+	@rm -rf build/
