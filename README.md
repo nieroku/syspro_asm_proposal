@@ -1,11 +1,1 @@
-## x86-64
-
-- [**Hello, World!**](./hello_world/README.md)
-- [**Hello, C!**](./hello_c/README.md) (автор:
-  [@TheAndrewLa](https://github.com/TheAndrewLa))
-- [**Традиционная задача**](./traditional/README.md)
-- [**НИИ последовательностей**](./nri_of_sequences/README.md)
-
-## AArch64
-
-- [**Традиционнейшая задача**](./the_most_traditional/README.md)
+Дальнейшая разработка задач перенесена в [@nsu-syspro-llp](https://github.com/nsu-syspro-llp)
